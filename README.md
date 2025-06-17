@@ -74,6 +74,60 @@ Before you begin, ensure you have the following installed:
 
 ---
 
+### Optional: Enabling Online Synchronization with Firebase
+
+LinguaLeap supports synchronizing your progress, custom conversations, and user profile across multiple devices. This feature is powered by Google Firebase. To enable it, you will need to set up a Firebase project and provide the application with a service account key.
+
+**Follow these steps to enable online sync:**
+
+**Step 1: Get Your Firebase Service Account Key**
+
+1.  First, you must have a Google Firebase project. If you don't have one, create one for free at the [Firebase Console](https://console.firebase.google.com/).
+2.  Inside your Firebase project, navigate to **Project Settings** by clicking the gear icon ⚙️ next to "Project Overview".
+3.  Go to the **Service accounts** tab.
+4.  Click the **Generate new private key** button. A warning will appear; click **Generate key** to confirm.
+
+    ![Get service account picture](images/service-account-get.png)
+    *(A generic screenshot showing the Firebase UI for generating a key)*
+
+5.  Your browser will download a JSON file with a long, unique name. **Rename this file to `serviceAccount.json`**.
+
+**Step 2: Place the `serviceAccount.json` File**
+
+1.  Take the `serviceAccount.json` file you just renamed.
+2.  Place it in the **root directory** of the LinguaLeap project. This is the same directory that contains your `pom.xml` and `.env` files.
+
+    Your project structure should look like this:
+    ```
+    LinguaLeap/
+    ├── .env
+    ├── serviceAccount.json   <-- Place the file here
+    ├── pom.xml
+    ├── src/
+    └── ...
+    ```
+
+**Step 3: Configure Your `.env` File**
+
+1.  Open your `.env` file.
+2.  Add the `DB_MODE=ONLINE` variable. Your file should now look something like this:
+
+    ```env
+    OPENAI_API_KEY=sk-your-openai-api-key-goes-here
+    DB_MODE=ONLINE
+    ```
+3.  Setting `DB_MODE` to `ONLINE` signals to LinguaLeap that it should initialize a connection to Firebase using the `serviceAccount.json` file upon startup.
+
+**Important Security Note:** The `serviceAccount.json` file grants administrative access to your Firebase project. It is extremely sensitive. **Never** commit this file to a public repository. The project's `.gitignore` file should already be configured to ignore it, but it's good practice to double-check.
+
+```gitignore
+# Secret credentials
+.env
+serviceAccount.json
+```
+
+Now, the next time you run the application, it will synchronize your data with your online Firebase database instead of using the local database. If you ever want to switch back to offline mode, simply change `DB_MODE` to `OFFLINE` or remove the line entirely.
+
 ### **First-Time Setup: Adding Your OpenAI API Key**
 
 When you run LinguaLeap for the very first time, it will detect that you haven't provided an API key and will prompt you to enter one.
