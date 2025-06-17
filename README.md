@@ -48,8 +48,8 @@ Before you begin, ensure you have the following installed:
 
 1.  **Clone the repository**
     ```sh
-    git clone https://github.com/your-username/LinguaLeap.git
-    cd LinguaLeap
+    git clone https://github.com/Nielskepielske/Language_learning_app_public.git
+    cd Language_learning_app_public
     ```
 
 2.  **Prepare the Environment File**
@@ -59,7 +59,7 @@ Before you begin, ensure you have the following installed:
 
     Your `.env` file should initially be empty or look like this:
     ```
-    # Add your environment variables here
+    DB_MODE=OFFLINE
     ```
     **Important**: The application will automatically add your API key to this file later.
 

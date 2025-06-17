@@ -45,3 +45,6 @@ build/
 
 ## json ###
 serviceAccount.json
+
+## Database files ##
+*.db
