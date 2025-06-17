@@ -4,8 +4,7 @@
 
 LinguaLeap is a desktop application built with JavaFX that revolutionizes language learning. Instead of static lessons, you engage in real-time conversations with an advanced AI, practice your speaking skills with guided tests, and track your progress in a fun, gamified environment.
 
-![LinguaLeap Main Screen](path/to/your/screenshot/main-screen.png)
-*(Replace the path above with a real screenshot of your app's main interface)*
+![LinguaLeap Main Screen](images/appIcon.png){width="200" height="200"}
 
 ---
 
