@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="HBox" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+         styleClass="card, bg-dark"
+>
+    <VBox styleClass="align-center, w-200, linear-gradient-gray, border-radius-left-1" spacing="10">
+        <Label fx:id="lblOrder" prefWidth="40" prefHeight="40" styleClass="primary, b1, circle, bg-gray, align-center"/>
+        <Label fx:id="lblStatus" styleClass="primary, b2" managed="false"/>
+    </VBox>
+    <VBox HBox.hgrow="ALWAYS" styleClass="p-2">
+        <Label fx:id="lblTitle" styleClass="primary, h3"/>
+        <Label fx:id="lblDescription" styleClass="secondary, b2"/>
+        <Region styleClass="sh-4"/>
+        <HBox styleClass="align-center-left">
+            <Label styleClass="secondary, b2" text="Rating: "/>
+            <Label fx:id="lblRating" styleClass="primary, b2"/>
+        </HBox>
+        <HBox>
+            <HBox HBox.hgrow="ALWAYS"/>
+            <Button fx:id="btnAction" styleClass="btn-modern, bg-light, border-1, border-light"/>
+        </HBox>
+    </VBox>
+</fx:root>

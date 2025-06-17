@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" spacing="15" alignment="CENTER" styleClass="bg-dark" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.final_app.views.pages.RegisterView">
+    <padding>
+        <Insets top="30" right="40" bottom="30" left="40" />
+    </padding>
+
+    <Label text="LinguaLeap" styleClass="h1, primary" alignment="CENTER">
+        <font>
+            <Font name="System Bold" size="32.0" />
+        </font>
+    </Label>
+
+    <Label text="Create New Account" styleClass="h3, primary" alignment="CENTER">
+        <VBox.margin>
+            <Insets bottom="15.0" />
+        </VBox.margin>
+    </Label>
+
+    <VBox styleClass="card, bg-dark-lighter" spacing="15" alignment="TOP_CENTER" maxWidth="400">
+        <padding>
+            <Insets top="25" right="30" bottom="25" left="30" />
+        </padding>
+
+        <VBox spacing="8">
+            <Label text="Username" styleClass="b2, primary" />
+            <TextField fx:id="txtUsername" promptText="Choose a username" styleClass="textfield-modern, bg-dark-lighter, border-light, border-1"/>
+        </VBox>
+
+        <VBox spacing="8">
+            <Label text="Email Address" styleClass="b2, primary" />
+            <TextField fx:id="txtEmail" promptText="Enter your email" styleClass="textfield-modern, bg-dark-lighter, border-light, border-1"/>
+        </VBox>
+
+        <VBox spacing="8">
+            <Label text="Password" styleClass="b2, primary" />
+            <PasswordField fx:id="txtPassword" promptText="Create a password" styleClass="textfield-modern, bg-dark-lighter, border-light, border-1" />
+        </VBox>
+
+        <VBox spacing="8">
+            <Label text="Confirm Password" styleClass="b2, primary" />
+            <PasswordField fx:id="txtConfirmPassword" promptText="Enter password again" styleClass="textfield-modern, bg-dark-lighter, border-light, border-1" />
+        </VBox>
+
+        <Label fx:id="lblError" styleClass="b3" textFill="#e74c3c" wrapText="true" alignment="CENTER" />
+
+        <Button fx:id="btnRegister" text="Create Account" styleClass="btn-modern, bg-blue, primary" prefWidth="200" />
+
+        <HBox alignment="CENTER" spacing="5">
+            <Label text="Already have an account?" styleClass="b3, primary" />
+            <Button fx:id="btnBackToLogin" text="Log In" styleClass="btn-text, primary" />
+        </HBox>
+    </VBox>
+</VBox>

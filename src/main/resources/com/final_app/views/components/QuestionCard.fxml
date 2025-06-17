@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<fx:root type="HBox" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+         styleClass="align-center"
+>
+    <ImageView fx:id="btnLeft" styleClass="btn" pickOnBounds="true"/>
+    <HBox spacing="20">
+        <VBox fx:id="outerContainer" styleClass="card, bg-dark, border-1, border-light, p-4, align-center, w-800" spacing="20">
+            <HBox styleClass="align-center-left">
+                <Label fx:id="lblQuestionNumber" styleClass="h4, bold, primary, circle, align-center" minHeight="0" minWidth="0" prefWidth="25" prefHeight="25" maxWidth="25" maxHeight="25" style="-fx-background-color: -pill-color;"/>
+            </HBox>
+            <Label fx:id="lblQuestion" styleClass="h2, primary, text-wrap, align-center"/>
+            <Label fx:id="lblUserAnswer" styleClass="h3, primary, text-wrap" wrapText="true"/>
+            <Region VBox.vgrow="ALWAYS" maxHeight="Infinity"/>
+            <HBox styleClass="align-center">
+                <VBox fx:id="btnRecord" fillWidth="false" styleClass="btn, circle,border-light, border-1, p-3">
+                    <ImageView fx:id="imageIcon"/>
+                </VBox>
+            </HBox>
+            <Region maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+            <HBox>
+                <Region maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="btnEvaluate" styleClass="btn-modern, primary, bg-dark" text="Evaluate"/>
+            </HBox>
+        </VBox>
+        <VBox fx:id="evaluationContainer"/>
+    </HBox>
+
+    <ImageView fx:id="btnRight" styleClass="btn" pickOnBounds="true"/>
+</fx:root>

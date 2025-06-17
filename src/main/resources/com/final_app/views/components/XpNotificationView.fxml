@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         styleClass="xp-notification"
+         maxWidth="250" maxHeight="80"
+         spacing="5"
+         opacity="0">
+    <HBox spacing="10" styleClass="align-center-left">
+        <ImageView fx:id="xpIcon" fitWidth="24" fitHeight="24" />
+        <Label fx:id="lblXpAmount" styleClass="h3, xp-amount" />
+    </HBox>
+    <Label fx:id="lblSource" styleClass="b3, xp-source" wrapText="true" />
+</fx:root>

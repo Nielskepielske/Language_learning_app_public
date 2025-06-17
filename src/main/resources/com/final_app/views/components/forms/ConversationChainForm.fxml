@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.final_app.views.components.LanguageSelectionView?>
+<?import com.final_app.views.components.custom.list.ItemFormList?>
+<fx:root type="StackPane" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml/1"
+         xmlns:custom="com.final_app.views.components.custom.list"
+>
+    <VBox fx:id="mainBox" styleClass="card, card-body" spacing="30">
+        <VBox>
+            <Label fx:id="lblTitle" styleClass="h2, primary" text="Conversation Chain"/>
+            <Label fx:id="lblDescription" styleClass="b2, secondary" text="Fill in the details to create a new conversation chain"/>
+        </VBox>
+        <VBox spacing="20" maxWidth="Infinity">
+            <VBox spacing="5">
+                <Label fx:id="lblPTitle" styleClass="h4, primary" text="Title"/>
+                <TextField fx:id="txtTitle" styleClass="textfield-modern" />
+            </VBox>
+            <VBox spacing="5">
+                <Label fx:id="lblPDescription" styleClass="h4, primary" text="Description"/>
+                <TextArea fx:id="txtDescription" styleClass="textarea-modern" promptText="Enter a description..."/>
+            </VBox>
+
+            <HBox spacing="10">
+                <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="5">
+                    <Label fx:id="lblPLanguage" styleClass="h4, primary" text="Language"/>
+                    <HBox>
+                        <ChoiceBox fx:id="languageChoiceBox" styleClass="choicebox-modern" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                    </HBox>
+                </VBox>
+                <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="5">
+                    <Label fx:id="lblPLanguageFrom" styleClass="h4, primary" text="Language"/>
+                    <HBox>
+                        <ChoiceBox fx:id="languageFromChoiceBox" styleClass="choicebox-modern" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                    </HBox>
+                </VBox>
+                <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" spacing="5">
+                    <Label fx:id="lblPLanguageLevel" styleClass="h4, primary" text="Language level"/>
+                    <HBox>
+                        <ChoiceBox fx:id="languageLevelChoiceBox" styleClass="choicebox-modern" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+            <VBox spacing="5">
+                <HBox>
+                    <Label fx:id="lblPConversations" styleClass="h4, primary" text="Conversations"/>
+                    <Region HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                    <HBox fx:id="btnAddConversation" styleClass="btn-modern, bg-dark, border-light, border-1, align-center, p-label-sm" spacing="5">
+                        <Label styleClass="b3, primary" text="+"/>
+                        <Label fx:id="lblAdd" styleClass="b3, primary, bold" text="Add"/>
+                    </HBox>
+                </HBox>
+                <HBox>
+                    <ItemFormList fx:id="conversationListView" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                </HBox>
+            </VBox>
+
+<!--            <ListView fx:id="conversationListView" styleClass="listview-modern"/>-->
+
+            <HBox>
+                <Region maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="btnCreate" styleClass="btn-modern, bg-purple, border-1, align-center, b3, bold, p-label-m, primary" text="Create"/>
+            </HBox>
+        </VBox>
+    </VBox>
+
+</fx:root>

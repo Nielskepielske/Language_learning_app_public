@@ -1,0 +1,48 @@
+/* ------ BORDERS ------ */
+.border-1{
+    -fx-border-width: 1px;
+}
+.border-2{
+    -fx-border-width: 0.5px;
+}
+.border-3{
+    -fx-border-width: 0.2px;
+}
+
+
+.border-bottom-1{
+    -fx-border-width: 0 0 0.2 0; /* top, right, bottom, left */
+}
+
+.border-debug{
+    -fx-border-color: red;
+    -fx-border-width: 1;
+}
+
+/* ------- BORDER RADIUS --------- */
+.border-radius-4{
+    -fx-border-radius: 40;
+    -fx-background-radius: 40;
+}
+.border-radius-3{
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+}
+.border-radius-2{
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+.border-radius-1{
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+.circle{
+    -fx-border-radius: 500;
+    -fx-background-radius: 500;
+}
+
+.border-radius-left-1{
+    -fx-border-radius: 10 0 0 10;
+    -fx-background-radius: 10 0 0 10;
+}
+/* ------- END BORDER RADIUS -------- */

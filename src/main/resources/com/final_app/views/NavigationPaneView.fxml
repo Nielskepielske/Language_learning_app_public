@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.ImageView?>
+<VBox spacing="10" styleClass="navigation-pane" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.final_app.views.NavigationPaneView">
+    <HBox styleClass="titlePane">
+        <VBox styleClass="appIcon">
+            <ImageView fx:id="imgIcon"/>
+        </VBox>
+        <Label styleClass="appTitle">LinguaLeap</Label>
+    </HBox>
+    <ListView fx:id="navListView" VBox.vgrow="ALWAYS" />
+</VBox>

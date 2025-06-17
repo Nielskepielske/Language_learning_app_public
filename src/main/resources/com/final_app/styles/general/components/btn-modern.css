@@ -1,0 +1,36 @@
+/* MODERN BUTTON */
+.btn-modern{
+    -fx-border-width: 0.5;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10;
+}
+
+.btn-modern:hover{
+    -fx-cursor: hand;
+}
+
+.btn{
+
+}
+
+.btn:hover{
+   -fx-cursor: hand;
+}
+
+.btn-text {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-width: 0.5;
+    -fx-border-color: white;
+    -fx-background-color: black;
+    -fx-cursor: hand;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}

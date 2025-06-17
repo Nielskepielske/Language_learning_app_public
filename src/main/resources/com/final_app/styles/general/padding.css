@@ -1,0 +1,70 @@
+/* ------- PADDING ------------ */
+.p-5{
+    -fx-padding: 50;
+}
+.p-4{
+    -fx-padding: 40;
+}
+.p-3{
+    -fx-padding: 30;
+}
+.p-2{
+    -fx-padding: 20;
+}
+.p-1{
+    -fx-padding: 10;
+}
+
+.pw-15{
+    -fx-padding: 0 150;
+}
+.pw-14{
+    -fx-padding: 0 140;
+}
+.pw-13{
+    -fx-padding: 0 130;
+}
+.pw-12{
+    -fx-padding: 0 120;
+}
+.pw-11{
+    -fx-padding: 0 110;
+}
+.pw-10{
+    -fx-padding: 0 100;
+}
+.pw-9{
+    -fx-padding: 0 90;
+}
+.pw-8{
+    -fx-padding: 0 80;
+}
+.pw-7{
+    -fx-padding: 0 70;
+}
+.pw-6{
+    -fx-padding: 0 60;
+}
+
+.pw-5{
+    -fx-padding: 0 50;
+}
+.pw-4{
+    -fx-padding: 0 40;
+}
+.pw-3{
+    -fx-padding: 0 30;
+}
+.pw-2{
+    -fx-padding: 0 20;
+}
+.pw-1{
+    -fx-padding: 0 10;
+}
+
+.p-label-sm{
+    -fx-padding: 5 10;
+}
+.p-label-m{
+    -fx-padding: 10 20;
+}

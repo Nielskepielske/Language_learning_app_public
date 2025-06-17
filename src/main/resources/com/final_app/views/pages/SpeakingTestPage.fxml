@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.final_app.views.pages.SpeakingTestPage"
+      styleClass="p-4"
+      spacing="10"
+>
+    <HBox styleClass="align-center-left">
+        <HBox fx:id="btnBack" styleClass="btn-modern, align-center">
+            <ImageView fx:id="imgBack" />
+        </HBox>
+        <VBox styleClass="align-center-left">
+            <Label fx:id="lblTitle" styleClass="h3, primary" text="Back to speaking tests"/>
+            <Label fx:id="lblExtra" styleClass="b3, secondary"/>
+        </VBox>
+    </HBox>
+
+
+    <ScrollPane fx:id="scrollPane" fitToWidth="true" VBox.vgrow="SOMETIMES" styleClass="align-center">
+            <GridPane fx:id="gridPane" styleClass="align-center" maxHeight="Infinity">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="80" halignment="CENTER"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints percentHeight="90"/>
+                    <RowConstraints percentHeight="10"/>
+                </rowConstraints>
+                <VBox fx:id="outerBox" GridPane.rowIndex="0" styleClass="align-center">
+                    <VBox fx:id="explanationBox" styleClass="card, p-4" visible="false" managed="false">
+                        <Label fx:id="lblLesson" styleClass="h2, primary" text="Lesson"/>
+
+                        <!--                <ScrollPane fx:id="scrollPane"-->
+                        <!--                        hbarPolicy="NEVER"-->
+                        <!--                        fitToWidth="true"-->
+                        <!--                >-->
+                        <VBox>
+                            <Label fx:id="lblExplanation" styleClass="b2, primary, text-wrap" VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                        <!--                </ScrollPane>-->
+                        <Region VBox.vgrow="ALWAYS" styleClass="sh-1" maxHeight="Infinity"/>
+                        <HBox>
+                            <Region HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                            <Button fx:id="btnStartTest" styleClass="btn-modern, bg-dark, primary, border-1, border-light"
+                                    text="Start test"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox fx:id="evaluationBox" styleClass="card, p-4, align-center" spacing="30" visible="false"
+                          managed="false">
+                        <HBox styleClass="align-center">
+                            <Label text="Speaking Test Completed!" styleClass="primary, h4"/>
+                        </HBox>
+                        <HBox styleClass="align-center">
+                            <VBox fx:id="progressBox" styleClass="align-center" spacing="20"/>
+                        </HBox>
+                        <VBox spacing="15">
+                            <Label styleClass="h4, primary" text="Questions"/>
+                            <FlowPane fx:id="questionBox"/>
+                        </VBox>
+                    </VBox>
+                </VBox>
+                <Region GridPane.rowIndex="1"/>
+            </GridPane>
+
+    </ScrollPane>
+
+</VBox>

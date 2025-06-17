@@ -1,0 +1,20 @@
+/* CARD */
+.card{
+    -fx-border-color: rgba(255,255,255,0.3);
+    -fx-border-width: 0.5;
+    -fx-border-radius: 10,10,10,10;
+    -fx-background-radius: 10,10,10,10;
+    -fx-wrap-text: true;
+}
+
+.card-header{
+    -fx-padding: 0;
+    -fx-background-radius: 10 10 0 0;
+}
+.card-body{
+    -fx-padding: 20;
+}
+
+.card-header .header{
+    -fx-padding: 20;
+}

@@ -1,0 +1,11 @@
+/* -------- ALIGNMENT ---------*/
+.align-center{
+    -fx-alignment: center;
+}
+.align-center-left{
+    -fx-alignment: center-left;
+}
+.align-center-right{
+    -fx-alignment: center-right;
+}
+/* ------- END ALIGNMENT --------- */

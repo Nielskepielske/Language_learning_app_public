@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+         styleClass="card"
+>
+    <VBox styleClass="card-header, bg-card-header">
+        <VBox styleClass="header" spacing="10">
+            <Label fx:id="lblTitle" styleClass="h3, primary">Scenario</Label>
+            <Label fx:id="lblDescription" styleClass="b3, secondary, text-wrap"/>
+        </VBox>
+    </VBox>
+    <VBox styleClass="card-body" spacing="10">
+        <Label fx:id="lblKeyPoints" styleClass="h4, primary">Key phrases to practice:</Label>
+        <VBox fx:id="lstKeyPoints" styleClass="bg-dark, primary"/>
+    </VBox>
+
+</fx:root>

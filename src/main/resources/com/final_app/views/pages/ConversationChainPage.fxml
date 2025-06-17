@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.final_app.views.pages.ConversationChainPage"
+      styleClass="bg-dark, p-2"
+>
+    <ScrollPane fitToWidth="true">
+        <VBox spacing="20">
+            <HBox styleClass="align-center-left" spacing="20">
+                <HBox fx:id="btnBack" styleClass="align-center, btn-modern">
+                    <ImageView fx:id="imgBack"/>
+                </HBox>
+                <VBox spacing="5">
+                    <Label fx:id="lblTitle" styleClass="h2, primary"/>
+                    <Label fx:id="lblExtraInfo" styleClass="b3, secondary"/>
+                </VBox>
+            </HBox>
+            <VBox styleClass="card, p-2" spacing="10">
+                <Label fx:id="lblDescriptionTitle" styleClass="h2, primary" text="Chain Progress"/>
+                <Label fx:id="lblDescription" styleClass="b3, secondary"/>
+                <HBox>
+                    <Label fx:id="lblProgressTitle" styleClass="b2, primary, bold" text="Progress"/>
+                    <HBox HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                    <Label fx:id="lblConversationCompleted" styleClass="b2, primary"/>
+                </HBox>
+                <HBox>
+                    <ProgressBar fx:id="progressCompleted" prefHeight="15" styleClass="progress-bar-new" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                </HBox>
+            </VBox>
+            <VBox spacing="10">
+                <Label fx:id="lblSubtitle" styleClass="h3, primary" text="Conversations in this Chain"/>
+                <VBox fx:id="conversationContainer" spacing="10"/>
+            </VBox>
+        </VBox>
+    </ScrollPane>
+</VBox>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Line?>
+<?import com.final_app.views.components.custom.table.CustomTableView?>
+<?import javafx.scene.image.ImageView?>
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         styleClass="bg-dark,p-2"
+         spacing="20"
+>
+    <HBox styleClass="align-center-left">
+        <VBox fx:id="btnBack" styleClass="btn-modern, align-center">
+            <ImageView fx:id="imgBack"/>
+        </VBox>
+        <VBox styleClass="align-center-left">
+            <Label fx:id="lblTitle" styleClass="primary, h2" text="back to conversations"/>
+            <Label fx:id="lblExtra" styleClass="secondary, b2" />
+        </VBox>
+        <Region maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <VBox>
+            <HBox fx:id="btnCreate" styleClass="btn-modern, bg-light, align-center" spacing="5" fillHeight="false">
+                <Label styleClass="b3" text="+"/>
+                <Label fx:id="lblCreate" styleClass="b3, bold" text="Create new"/>
+            </HBox>
+        </VBox>
+    </HBox>
+    <VBox styleClass="card, card-body" spacing="15">
+        <VBox>
+            <Label fx:id="lblDescriptionTitle" styleClass="h2, primary" text="Description"/>
+            <Label fx:id="lblDescription" styleClass="b2, secondary" />
+        </VBox>
+        <HBox fx:id="pillBox" spacing="15"/>
+    </VBox>
+    <CustomTableView fx:id="tblItems" />
+<!--    <GridPane fx:id="rowContainer" gridLinesVisible="true">-->
+<!--        <columnConstraints>-->
+<!--            <ColumnConstraints percentWidth="20"/>-->
+<!--            <ColumnConstraints percentWidth="20"/>-->
+<!--            <ColumnConstraints percentWidth="20"/>-->
+<!--            <ColumnConstraints percentWidth="20"/>-->
+<!--            <ColumnConstraints percentWidth="20" halignment="RIGHT"/>-->
+<!--        </columnConstraints>-->
+<!--        <rowConstraints>-->
+<!--            <RowConstraints prefHeight="60" valignment="CENTER"/>-->
+<!--        </rowConstraints>-->
+<!--        <HBox styleClass="permanent, cell, align-center-left" GridPane.rowIndex="0" GridPane.columnIndex="0">-->
+<!--            <Label styleClass="primary, h4, permanent" >ID</Label>-->
+<!--        </HBox>-->
+<!--        <HBox styleClass="permanent, cell, align-center-left" GridPane.rowIndex="0" GridPane.columnIndex="1">-->
+<!--            <Label styleClass="primary, h4, permanent" >Name</Label>-->
+<!--        </HBox>-->
+<!--        <HBox styleClass="permanent, cell, align-center-left" GridPane.rowIndex="0" GridPane.columnIndex="2">-->
+<!--            <Label styleClass="primary, h4, permanent" >Created at</Label>-->
+<!--        </HBox>-->
+<!--        <HBox styleClass="permanent, cell, align-center-left" GridPane.rowIndex="0" GridPane.columnIndex="3">-->
+<!--            <Label styleClass="primary, h4, permanent" >Last updated</Label>-->
+<!--        </HBox>-->
+<!--        <HBox styleClass="permanent, cell, align-center-left" GridPane.rowIndex="0" GridPane.columnIndex="4">-->
+<!--            <Label styleClass="primary, h4, permanent" >Navigation</Label>-->
+<!--        </HBox>-->
+<!--    </GridPane>-->
+</fx:root>

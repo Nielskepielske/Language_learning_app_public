@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         styleClass="card, card-body"
+>
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="70"/>
+            <ColumnConstraints percentWidth="30" halignment="RIGHT"/>
+        </columnConstraints>
+        <Label fx:id="lblTitle" styleClass="primary" GridPane.columnIndex="0"/>
+        <ImageView fx:id="icon" styleClass="primary" GridPane.columnIndex="1"/>
+    </GridPane>
+    <Region styleClass="sh-5"/>
+    <Label fx:id="lblValue" styleClass="h2, primary"/>
+    <Label fx:id="lblExtra" styleClass="b3, secondary"/>
+</fx:root>

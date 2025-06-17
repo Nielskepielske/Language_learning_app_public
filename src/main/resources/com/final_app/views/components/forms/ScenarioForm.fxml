@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.final_app.views.components.custom.list.ItemFormList?>
+<fx:root type="StackPane" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+>
+    <VBox spacing="30" styleClass="card, card-body">
+        <VBox>
+            <Label fx:id="lblTitle" styleClass="primary, h2" text="Scenario"/>
+            <Label fx:id="lblDescription" styleClass="secondary, b2" text="Fill in the details to create a new scenario"/>
+        </VBox>
+        <VBox spacing="20">
+            <VBox spacing="5">
+                <Label fx:id="lblPDescription" styleClass="h4, primary" text="Description"/>
+                <TextArea fx:id="txtDescription" styleClass="textarea-modern"/>
+            </VBox>
+            <VBox spacing="5">
+                <Label fx:id="lblPRole" styleClass="h4, primary" text="Role"/>
+                <HBox>
+                    <ChoiceBox fx:id="roleChoiceBox" styleClass="choicebox-modern" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                </HBox>
+            </VBox>
+            <VBox spacing="5">
+                <HBox>
+                    <Label fx:id="lblPKeyPoints" styleClass="h4, primary" text="Key points"/>
+                    <Region HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                    <HBox fx:id="btnAdd" styleClass="btn-modern, bg-dark, border-light, border-1, align-center, p-label-sm" spacing="5">
+                        <Label styleClass="b3, primary" text="+"/>
+                        <Label fx:id="lblAdd" styleClass="b3, primary, bold" text="Add"/>
+                    </HBox>
+                </HBox>
+                <ItemFormList fx:id="lstKeyPoints"/>
+            </VBox>
+
+
+
+            <HBox>
+                <Region maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="btnCreate" styleClass="btn-modern, bg-purple, align-center, b3, primary, bold, p-label-m" text="Create"/>
+            </HBox>
+        </VBox>
+    </VBox>
+</fx:root>

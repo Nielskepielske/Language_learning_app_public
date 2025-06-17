@@ -1,0 +1,15 @@
+.textarea-modern{
+    -fx-background-color: -background-color;
+    -fx-text-fill: white;
+    -fx-control-inner-background: -background-color;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(255,255,255, 0.5);
+    -fx-padding: 5;
+    -fx-wrap-text: true;
+}
+
+.textarea-modern:focused{
+    -fx-border-width: 1;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="StackPane" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+>
+    <VBox spacing="10">
+        <HBox spacing="10" styleClass="align-center-right, p-3, border-bottom-1, border-light">
+            <Label fx:id="lblLevel" styleClass="b2, primary"/>
+            <ProgressBar fx:id="pbLevel" styleClass="progress-bar-new"/>
+            <Region styleClass="sb-2"/>
+            <Label fx:id="lblUser" styleClass="b2, primary"/>
+        </HBox>
+        <Region fx:id="mainContent" VBox.vgrow="ALWAYS"/>
+    </VBox>
+</fx:root>
+

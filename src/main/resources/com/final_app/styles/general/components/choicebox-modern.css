@@ -1,0 +1,33 @@
+.choicebox-modern{
+    -fx-background-color: -background-color;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(255,255,255, 0.5);
+    -fx-text-fill: white;
+}
+
+.choicebox-modern:focused{
+    -fx-border-width: 1;
+}
+
+.choicebox-modern .context-menu{
+    -fx-background-color: -background-color;
+}
+
+.choicebox-modern > .label{
+    -fx-text-fill: white;
+}
+
+.choicebox-modern .menu-item > .label{
+    -fx-text-fill: white;
+}
+.choicebox-modern .menu-item{
+    -fx-max-width: Infinity;
+}
+.choicebox-modern .menu-item:focused {
+    -fx-background-color: rgba(255,255,255,0.1);
+}
+.choicebox-modern .menu-item:hover{
+    -fx-background-color: rgba(255,255,255,0.1);
+}

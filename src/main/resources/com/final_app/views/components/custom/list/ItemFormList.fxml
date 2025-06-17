@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="VBox" xmlns:fx="http://javafx.com/fxml" spacing="8">
+    <ListView fx:id="listResults" styleClass="listview-modern2" VBox.vgrow="ALWAYS"/>
+</fx:root>

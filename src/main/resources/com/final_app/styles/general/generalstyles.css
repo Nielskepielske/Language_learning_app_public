@@ -1,0 +1,16 @@
+/* General */
+/* -------- COMPONENTS ---------- */
+
+/* PAGE */
+.page{
+    -fx-padding: 20;
+}
+
+/* DIVIDER */
+.divider-1{
+    -fx-pref-height: 0.2;
+    -fx-max-width: 10000000000;
+}
+
+
+

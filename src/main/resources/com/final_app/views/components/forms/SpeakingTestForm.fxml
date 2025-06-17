@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.final_app.views.components.LanguageSelectionView?>
+<?import com.final_app.views.components.custom.list.ItemFormList?>
+<fx:root type="StackPane" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+>
+    <VBox styleClass="card, card-body" spacing="30">
+        <VBox>
+            <Label fx:id="lblTitle" styleClass="primary, h2" text="Speaking Test"/>
+            <Label fx:id="lblDescription" styleClass="secondary, b2" text="Fill in the details and generate a speaking test"/>
+        </VBox>
+        <VBox spacing="20">
+            <VBox spacing="5">
+                <Label fx:id="lblPTitle" styleClass="h4, primary" text="Title"/>
+                <TextField fx:id="txtTitle" styleClass="textfield-modern"/>
+            </VBox>
+            <VBox spacing="5">
+                <Label fx:id="lblPDescription" styleClass="h4, primary" text="Description"/>
+                <TextArea fx:id="txtDescription" styleClass="textarea-modern"/>
+            </VBox>
+
+            <HBox spacing="15">
+                <VBox HBox.hgrow="ALWAYS" maxWidth="Infinity" spacing="5">
+                    <Label fx:id="lblPLanguage" styleClass="h4, primary" text="Language"/>
+                    <HBox>
+                        <ChoiceBox fx:id="languageChoiceBox" styleClass="choicebox-modern" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                    </HBox>
+                </VBox>
+                <VBox HBox.hgrow="ALWAYS" maxWidth="Infinity" spacing="5">
+                    <Label fx:id="lblPLanguageFrom" styleClass="h4, primary" text="Language"/>
+                    <HBox>
+                        <ChoiceBox fx:id="languageFromChoiceBox" styleClass="choicebox-modern" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                    </HBox>
+                </VBox>
+                <VBox HBox.hgrow="ALWAYS" maxWidth="Infinity" spacing="5">
+                    <Label fx:id="lblPLanguageLevel" styleClass="h4, primary" text="Language level"/>
+                    <HBox>
+                        <ChoiceBox fx:id="languageLevelChoiceBox" styleClass="choicebox-modern" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+            <HBox fx:id="generateBox" spacing="20">
+                <Button fx:id="btnGenerate" styleClass="btn-modern, primary, bg-dark, border-light, border-1" text="Generate"/>
+            </HBox>
+            <VBox spacing="5">
+                <Label fx:id="lblPExplanation" styleClass="h4, primary" text="Explanation"/>
+                <TextArea fx:id="txtExplanation" styleClass="textarea-modern"/>
+            </VBox>
+            <VBox spacing="5">
+                <Label fx:id="lblPQuestions" styleClass="h4, primary" text="Questions"/>
+                <ItemFormList fx:id="speakingTestQuestionListView"/>
+            </VBox>
+
+<!--            <ListView fx:id="speakingTestQuestionListView" styleClass="listview-modern"/>-->
+<!--            <HBox fx:id="btnAddConversation" styleClass="btn-modern, bg-dark, border-light, border-1, align-center">-->
+<!--                <Label styleClass="h4, primary" text="Add"/>-->
+<!--            </HBox>-->
+            <HBox>
+                <Region maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="btnCreate" styleClass="btn-modern, bg-purple, border-1, align-center, b3, primary, bold, p-label-m" text="Create"/>
+            </HBox>
+        </VBox>
+    </VBox>
+</fx:root>

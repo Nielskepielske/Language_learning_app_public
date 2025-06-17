@@ -1,0 +1,577 @@
+/* dark-app.css */
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');*/
+
+/*@font-face{
+    font-family: 'Inter';
+    src: url('fonts/inter/Inter-VariableFont_opsz,wght.ttf');
+}*/
+
+/* Algemene stijl voor de hele applicatie */
+.root {
+    -fx-font-family: "JetBrains Mono", sans-serif;
+    -fx-font-smoothing-type: gray;
+    -fx-font-size: 16px;
+    -fx-background-color: #020916; /* Donkere achtergrond */
+}
+
+
+
+/* TopBar */
+
+.topBar {
+    -fx-pref-height: 70;
+    -fx-background-color: #020916;
+
+    /*-fx-border-color: rgba(255, 255, 255, 0.3);
+
+    -fx-border-width: 0 0 0.5 0;
+    -fx-font-size: 17;*/
+}
+
+.topBar .progress-bar{
+    -fx-pref-width: 120;
+    -fx-pref-height: 10;
+}
+
+.topBar .progress-bar > .bar{
+    -fx-background-insets: 0;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-background-color: white;
+}
+
+.topBar .progress-bar > .track{
+    -fx-background-color: #26272B;
+    -fx-background-radius: 40;
+}
+
+
+/* Dashboard */
+.dashboard{
+    -fx-padding: 20;
+}
+.dashboard .dashboardIntro {
+}
+.dashboard .dashboardIntro .actions{
+    -fx-spacing: 20;
+    -fx-alignment: center-right;
+}
+
+.dashboard .dashboardIntro .text{
+}
+
+.dashboard .dashboardIntro .welcomeMessage{
+    -fx-font-size: 35;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.dashboard .dashboardIntro .description{
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-opacity: 0.5;
+}
+
+.dashboardIntro .button.newLanguage{
+    -fx-background-color: black;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+}
+
+.dashboardIntro .button.newConversation{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.dashboard .button{
+    -fx-border-width: 0.5;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10;
+}
+
+.dashboard .levelInfo{
+    -fx-text-fill: white;
+}
+.dashboard .levelInfo .label{
+    -fx-text-fill: white;
+}
+
+.dashboard .progress-bar-new{
+    -fx-pref-height: 10;
+}
+
+
+
+
+
+/* Algemene ScrollPane stijl */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+/* Verwijder de knoppen (pijltjes) */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+/* De scrollbar zelf */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+/* De scrollbar track (achtergrond) */
+.scroll-bar .track {
+    -fx-background-color: rgba(255, 255, 255, 0.1); /* Licht transparant */
+    -fx-border-color: transparent;
+    -fx-background-radius: 5px;
+}
+
+/* De "thumb" (schuifbalk) */
+.scroll-bar .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-background-radius: 5px;
+}
+
+/* Hover effect op de thumb */
+.scroll-bar .thumb:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Klikken op de thumb */
+.scroll-bar .thumb:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* De hoek tussen de horizontale en verticale scrollbar */
+.scroll-pane .corner {
+    -fx-background-color: transparent;
+}
+
+
+/* Styles for EvaluationView */
+
+/* Main container */
+.evaluation-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.evaluation-pane {
+    -fx-background-color: #151417;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 1;
+    -fx-padding: 25;
+}
+
+.evaluation-content {
+    -fx-padding: 10;
+    -fx-spacing: 15;
+}
+
+/* Title */
+.evaluation-title {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Circular progress */
+.circular-progress-container {
+    -fx-alignment: center;
+    -fx-padding: 20;
+}
+
+/* XP Section */
+.xp-container {
+    -fx-spacing: 5;
+    -fx-padding: 5 0;
+}
+
+.xp-label {
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+    -fx-font-size: 16;
+}
+
+.xp-value {
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+/* Description */
+.description-container {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}
+
+.section-header {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 0 0 5 0;
+}
+
+.description-text {
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+    -fx-font-size: 14;
+    -fx-wrap-text: true;
+}
+
+/* Skill breakdown toggle */
+.toggle-button {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+
+.toggle-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Skill breakdown section */
+.skill-breakdown {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+}
+
+.skill-label {
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+    -fx-font-size: 14;
+}
+
+.score-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-alignment: center-right;
+}
+
+/* Progress bars in skill breakdown */
+.skill-breakdown .progress-bar > .bar {
+    -fx-background-insets: 0;
+    -fx-background-radius: 3;
+}
+
+.skill-breakdown .progress-bar > .track {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 3;
+}
+
+/* Buttons */
+.button-primary {
+    -fx-background-color: #3882e4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.button-primary:hover {
+    -fx-background-color: #4a93f5;
+}
+
+.button-secondary {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.button-secondary:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Add these styles to your styles.css file */
+
+/* Center the evaluation scores and the circular progress bar */
+.evaluation-score-container {
+    -fx-alignment: center;
+    -fx-spacing: 15;
+}
+
+/* Style for the total score display */
+.evaluation-total-score {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Style for section labels */
+.evaluation-section-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+}
+
+/* Style for score values */
+.evaluation-score-value {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+/* Style for the description */
+.evaluation-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-wrap-text: true;
+}
+
+/* Style for the next button */
+.evaluation-next-button {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 20;
+}
+
+.evaluation-next-button:hover {
+    -fx-background-color: #e3e3e3;
+}
+/* Add these styles to your styles.css file */
+
+/* Evaluation view container styles */
+.evaluation-container {
+    -fx-background-color: #08090A;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+/* Section divider */
+.evaluation-divider {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-pref-height: 1;
+}
+
+/* Progress bars styling for stats section */
+.stats-progress-bar > .bar {
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.stats-progress-bar > .track {
+    -fx-background-color: #26272B;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+/* Vocabulary progress bar - customize color */
+.vocab-progress-bar > .bar {
+    -fx-background-color: #3882e4; /* Blue */
+}
+
+/* Grammar progress bar - customize color */
+.grammar-progress-bar > .bar {
+    -fx-background-color: #6bbf2c; /* Green */
+}
+
+/* Toggle button styling */
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15;
+}
+
+.toggle-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Close button styling */
+.close-button {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 20;
+}
+
+.close-button:hover {
+    -fx-background-color: #e3e3e3;
+}
+
+/* Section titles */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Feedback text */
+.feedback-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-wrap-text: true;
+    -fx-opacity: 0.9;
+}
+
+/* Stats labels */
+.stats-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+/* XP Notification Styles */
+.xp-notification {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);
+}
+
+.xp-notification .xp-amount {
+    -fx-text-fill: #3882e4; /* Blue color for XP */
+    -fx-font-weight: bold;
+}
+
+.xp-notification .xp-source {
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+}
+
+.level-up-notification {
+    -fx-background-color: rgba(56, 130, 228, 0.8); /* Blue background */
+}
+
+.level-up-notification .xp-amount {
+    -fx-text-fill: #ffffff; /* White text for better contrast */
+}
+
+.level-up-notification .xp-source {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+/* XP Progress Styles */
+.xp-progress-bar > .bar {
+    -fx-background-color: #3882e4; /* Blue */
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+}
+
+.xp-progress-bar > .track {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 10;
+}
+
+/* XP Milestone indicator */
+.xp-milestone {
+    -fx-background-color: #6bbf2c; /* Green */
+    -fx-background-radius: 5;
+    -fx-pref-width: 10;
+    -fx-pref-height: 10;
+}
+
+/* XP Summary section */
+.xp-summary {
+    -fx-background-color: rgba(56, 130, 228, 0.1);
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-border-color: rgba(56, 130, 228, 0.3);
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+}
+
+.xp-summary .title {
+    -fx-text-fill: #3882e4;
+    -fx-font-weight: bold;
+}
+
+.xp-summary .value {
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}
+
+/* Animation for XP gain */
+@keyframes pulse {
+    0% { -fx-scale-x: 1; -fx-scale-y: 1; }
+    50% { -fx-scale-x: 1.1; -fx-scale-y: 1.1; }
+    100% { -fx-scale-x: 1; -fx-scale-y: 1; }
+}
+
+.xp-pulse {
+    -fx-animation: pulse 0.5s;
+}
+
+/* Level badge */
+.level-badge {
+    -fx-background-color: #3882e4;
+    -fx-background-radius: 50%;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+}
+/* XP Earned Styles */
+.xp-earned-section {
+    -fx-background-color: rgba(56, 130, 228, 0.2);
+    -fx-background-radius: 10;
+    -fx-padding: 15 10;
+    -fx-border-color: rgba(56, 130, 228, 0.5);
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+}
+
+.xp-amount {
+    -fx-text-fill: #3882e4;
+    -fx-font-weight: bold;
+    -fx-font-size: 24;
+}
+
+.level-up-text {
+    -fx-text-fill: #6bbf2c;
+    -fx-font-weight: bold;
+}
+
+/* Animation for XP gain */
+.xp-pulse {
+    -fx-animation: pulse 1s;
+}
+
+@keyframes pulse {
+    0% { -fx-scale-x: 1; -fx-scale-y: 1; }
+    50% { -fx-scale-x: 1.2; -fx-scale-y: 1.2; }
+    100% { -fx-scale-x: 1; -fx-scale-y: 1; }
+}
+
+
+/* Grid cells border */
+.visible-grid .cell{
+    -fx-pref-height: 60;
+    -fx-border-color: white;
+    -fx-border-width: 0 0 0.2 0.2;
+    -fx-padding: 0 5;
+}
+

@@ -1,0 +1,10 @@
+.pill {
+    -fx-background-color: -pill-color;
+    -fx-padding: 5 10;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+}

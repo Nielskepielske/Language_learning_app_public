@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.final_app.views.components.LanguageSelectionView?>
+<?import javafx.scene.image.ImageView?>
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         styleClass="bg-dark, p-2"
+         spacing="30"
+>
+    <HBox styleClass="align-center-left" spacing="10">
+        <HBox fx:id="btnBack" styleClass="btn-modern, bg-black, primary">
+            <ImageView fx:id="imgBack"/>
+        </HBox>
+        <VBox>
+            <Label fx:id="lblTitle" styleClass="h2, primary" text="Add New Language"/>
+            <Label fx:id="lblDescription" styleClass="b2, secondary" text="Expand on your language learning journey"/>
+        </VBox>
+    </HBox>
+    <GridPane hgap="15" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="70"/>
+            <ColumnConstraints percentWidth="30"/>
+        </columnConstraints>
+        <VBox
+                GridPane.columnIndex="0"
+                GridPane.rowSpan="2"
+                GridPane.rowIndex="0"
+                styleClass="card, card-body"
+                spacing="10"
+        >
+            <VBox>
+                <Label fx:id="lblLanguageListTitle" text="Select a Language" styleClass="h2, primary"/>
+                <Label fx:id="lblLanguageListDescription" text="Choose a new language to start learning" styleClass="b2, secondary"/>
+            </VBox>
+            <FlowPane fx:id="lstLanguages" />
+        </VBox>
+        <VBox
+                GridPane.rowIndex="0"
+                GridPane.columnIndex="1"
+                styleClass="card, card-body"
+                spacing="10"
+        >
+            <VBox>
+                <Label fx:id="lblProficiencyTitle" text="Proficiency" styleClass="h2, primary"/>
+                <Label fx:id="lblProficiencyDescription" text="Choose your proficiency" styleClass="b2, secondary"/>
+            </VBox>
+            <FlowPane fx:id="lstLanguageLevels"/>
+        </VBox>
+        <VBox
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="1"
+                styleClass="card, card-body"
+                spacing="10"
+        >
+            <VBox>
+                <Label fx:id="lblSummaryTitle" text="Summary" styleClass="h2, primary"/>
+                <Label fx:id="lblSummaryDescription" text="Review your selection" styleClass="b2, secondary"/>
+            </VBox>
+            <VBox fx:id="summaryBox"/>
+            <HBox>
+                <Button fx:id="btnAddLanguage" text="Add Language" HBox.hgrow="ALWAYS" maxWidth="Infinity" styleClass="btn-modern, align-center, primary" style="-fx-background-color: -hover-color;"/>
+            </HBox>
+        </VBox>
+    </GridPane>
+</fx:root>

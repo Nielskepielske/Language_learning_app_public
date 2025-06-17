@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<fx:root
+        type="HBox"
+        xmlns="http://javafx.com/javafx/17.0.12"
+        xmlns:fx="http://javafx.com/fxml/1"
+        spacing="10"
+        styleClass="align-center"
+>
+    <VBox fx:id="btnRecord" styleClass="border-3, border-light, border-radius-1, p-1, align-center">
+        <ImageView fx:id="btnIcon" styleClass="border-3, border-light, border-radius-1, p-1"/>
+    </VBox>
+    <TextField fx:id="promptField" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" promptText="Put your prompt here..." styleClass="bg-dark, primary, border-radius-1, border-light, border-3, p-1" HBox.hgrow="ALWAYS" />
+    <VBox fx:id="btnSend" styleClass="border-radius-1, bg-light, p-1, align-center">
+        <ImageView fx:id="btnSendIcon" styleClass="p-1"/>
+    </VBox>
+</fx:root>

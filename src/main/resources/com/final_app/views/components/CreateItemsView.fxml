@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         styleClass="bg-dark, p-4"
+         spacing="20"
+>
+    <HBox spacing="15" styleClass="align-center-left">
+        <HBox fx:id="btnClose" styleClass="btn-modern, align-center">
+            <ImageView fx:id="imgClose"/>
+        </HBox>
+        <VBox>
+            <Label fx:id="lblTitle" styleClass="h2, primary" text="Create New Item"/>
+            <Label fx:id="lblDescription" styleClass="b2, secondary" text="Add new content to your learning journey"/>
+        </VBox>
+    </HBox>
+    <HBox spacing="20">
+        <VBox spacing="10">
+            <Label fx:id="lblSubTitle" styleClass="h3, primary" text="What would you like to add?"/>
+            <VBox fx:id="optionsList" styleClass="selection-list" spacing="10"/>
+        </VBox>
+
+        <ScrollPane fitToWidth="true" HBox.hgrow="ALWAYS">
+            <VBox fx:id="optionView"/>
+        </ScrollPane>
+    </HBox>
+</fx:root>

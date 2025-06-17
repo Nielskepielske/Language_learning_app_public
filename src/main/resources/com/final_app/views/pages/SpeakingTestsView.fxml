@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.final_app.views.components.CustomGroupWindow?>
+<?import com.final_app.views.components.custom.general.SearchBar?>
+<?import javafx.scene.image.ImageView?>
+<?import com.final_app.views.components.custom.general.FilterWindow?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.final_app.views.pages.SpeakingTestsView"
+           prefHeight="400.0" prefWidth="600.0"
+           styleClass="page"
+>
+    <VBox
+            spacing="30"
+    >
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50" halignment="RIGHT"/>
+            </columnConstraints>
+            <VBox GridPane.columnIndex="0">
+                <Label fx:id="lblTitle" styleClass="h1, primary">Speaking Tests</Label>
+                <Label fx:id="lblDescription" styleClass="b3, secondary">Test your speaking abilities and pronunciation.</Label>
+            </VBox>
+
+            <HBox fx:id="btnAddNewSpeakingTest" GridPane.columnIndex="1" styleClass="btn-modern, bg-light, border-1, align-center-right" GridPane.fillHeight="NEVER" GridPane.fillWidth="NEVER">
+                <Label text="+"/>
+                <Label fx:id="lblNewSpeakingTest"/>
+            </HBox>
+        </GridPane>
+        <HBox spacing="20">
+            <SearchBar fx:id="searchBar" HBox.hgrow="ALWAYS"/>
+            <HBox fx:id="btnFilter" styleClass="btn-modern, border-light, border-3, align-center">
+                <ImageView fx:id="imgFilter" />
+            </HBox>
+        </HBox>
+        <ScrollPane fitToWidth="true">
+            <VBox spacing="15">
+                <Label fx:id="lblSubTitle" styleClass="h3, primary"/>
+                <FlowPane fx:id="cards" hgap="20" vgap="20"/>
+            </VBox>
+        </ScrollPane>
+    </VBox>
+    <FilterWindow fx:id="filterWindow" visible="false"/>
+    <CustomGroupWindow fx:id="groupedSpeakingTestWindow" visible="false"/>
+
+</StackPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.final_app.views.components.custom.list.ItemFormList?>
+<?import com.final_app.views.components.custom.general.SearchBar?>
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         styleClass="card, border-1, border-light, p-2, bg-dark"
+         spacing="30"
+>
+    <VBox>
+        <Label fx:id="lblTitle" styleClass="primary, h3"/>
+        <Label fx:id="lblDescription" styleClass="secondary, b3"/>
+    </VBox>
+    <VBox spacing="30">
+        <SearchBar fx:id="searchBar" />
+        <!--    <ItemFormList fx:id="listResults" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>-->
+        <FlowPane fx:id="listResults" hgap="15" vgap="15"/>
+        <HBox spacing="15">
+            <HBox fx:id="btnCancel" styleClass="btn-modern, bg-dark">
+                <Label fx:id="lblCancel" styleClass="primary" text="Cancel"/>
+            </HBox>
+            <HBox fx:id="btnAdd" styleClass="btn-modern, bg-purple">
+                <Label fx:id="lblAdd" styleClass="primary" text="Add"/>
+            </HBox>
+        </HBox>
+    </VBox>
+</fx:root>

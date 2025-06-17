@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+
+<?import com.final_app.views.components.TopBarView?>
+<BorderPane fx:id="root" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.final_app.views.pages.RootView">
+    <left>
+        <!-- Inclusie van de navigatiepane -->
+        <fx:include source="../NavigationPaneView.fxml" />
+    </left>
+    <center>
+        <!-- Het centrale content gebied waar de pagina's worden geladen -->
+        <BorderPane fx:id="contentArea" >
+            <top>
+                <TopBarView fx:id="topBar"/>
+            </top>
+        </BorderPane>
+    </center>
+</BorderPane>

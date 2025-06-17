@@ -1,0 +1,71 @@
+/* ------- COLORS ---------- */
+.root{
+    -background-color: #020916;
+    -btn-default-color: #8953E0;
+    -btn-default-hover-color: #6839c9;
+    -pill-color: #1E293B;
+    -hover-color: #8953E0;
+    -selected-color: #8953E0;
+
+    -primary: white;
+    -secondary: #95A2AE;
+
+    -completed-color: #68f055;
+    -not-started-color: #f05555;
+    -in-progress-color: #3dbbff;
+}
+.bg-dark{
+    -fx-background-color: -background-color;
+}
+.bg-black{
+    -fx-background-color: black;
+}
+.bg-light{
+    -fx-background-color: white;
+}
+.bg-red{
+    -fx-background-color: rgba(255, 20, 20, 1);
+}
+
+.bg-gray{
+    -fx-background-color: #26272B;
+}
+
+.bg-dark-popup{
+    -fx-background-color: rgba(0,0,0, 0.4);
+}
+
+.bg-card-header{
+    -fx-background-color: #151417;
+}
+
+.border-light{
+    -fx-border-color: white;
+}
+
+.text-light{
+    -fx-text-fill: white;
+}
+
+.linear-gradient-gray{
+    -fx-background-color: linear-gradient(to right, #38383B, #232324);
+}
+
+.bg-dark-lighter {
+    -fx-background-color: #151417;
+}
+
+.bg-blue {
+    -fx-background-color: #26272B;
+}
+.bg-purple {
+    -fx-background-color: -btn-default-color;
+}
+.bg-purple:hover{
+    -fx-background-color: -btn-default-hover-color;
+}
+.bg-purple:disabled{
+    -fx-background-color: #451f7f;
+}
+
+/* ------ END COLORS ------- */

@@ -1,0 +1,49 @@
+/* ------ SPACERS -------- */
+
+/* Vertical */
+
+.sh-1{
+    -fx-pref-height: 50;
+}
+.sh-2{
+    -fx-pref-height: 40;
+}
+.sh-3{
+    -fx-pref-height: 30;
+}
+.sh-4{
+    -fx-pref-height: 20;
+}
+.sh-5{
+    -fx-pref-height: 10;
+}
+.sh-6{
+    -fx-pref-height: 5;
+}
+.sh-0{
+    -fx-pref-height: 0;
+}
+
+/* Horizontal */
+.sb-1{
+    -fx-pref-width: 50;
+}
+.sb-2{
+    -fx-pref-width: 40;
+}
+.sb-3{
+    -fx-pref-width: 30;
+}
+.sb-4{
+    -fx-pref-width: 20;
+}
+.sb-5{
+    -fx-pref-width: 10;
+}
+.sb-6{
+    -fx-pref-width: 5;
+}
+.sb-0{
+    -fx-pref-width: 0;
+}
+/* -------- END SPACERS -------- */

@@ -1,0 +1,12 @@
+.selectable-item{
+
+}
+
+.selectable-item:hover{
+    -fx-cursor: hand;
+    -fx-border-color: -hover-color;
+}
+
+.selectable-item.selected{
+    -fx-border-color: -selected-color;
+}

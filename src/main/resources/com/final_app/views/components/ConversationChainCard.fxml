@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<fx:root
+        type="VBox"
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        styleClass="card, w-350"
+>
+    <HBox fx:id="header" styleClass="linear-gradient-gray, card-header, align-center, h-150">
+        <ImageView fx:id="icon"/>
+    </HBox>
+    <VBox styleClass="card-body" spacing="25">
+        <VBox>
+            <HBox styleClass="align-center-left">
+                <Label fx:id="lblTitle" styleClass="h2, primary" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                <Label fx:id="lblAmountCompleted" styleClass="b4, bold, border-radius-1, border-light, border-3, primary, p-label-sm" alignment="CENTER_RIGHT" text="2/5"/>
+            </HBox>
+            <Region styleClass="sh-5"/>
+            <Label fx:id="lblDescription" styleClass="b3, secondary, text-wrap"/>
+        </VBox>
+        <GridPane vgap="15">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50" halignment="RIGHT"/>
+            </columnConstraints>
+            <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="align-center-left" spacing="10">
+                <Label fx:id="circle" prefHeight="17" prefWidth="17" minWidth="0" minHeight="0" styleClass="circle"/>
+                <Label fx:id="lblLanguage" styleClass="b2, primary"/>
+            </HBox>
+            <Label fx:id="lblDifficulty" styleClass="pill" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <HBox styleClass="align-center-left" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <Label fx:id="statusIcon" styleClass="primary"/>
+                <Label fx:id="lblStatus" styleClass="b3, secondary"/>
+            </HBox>
+            <Button fx:id="actionButton" styleClass="btn-modern, bg-light" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        </GridPane>
+    </VBox>
+</fx:root>

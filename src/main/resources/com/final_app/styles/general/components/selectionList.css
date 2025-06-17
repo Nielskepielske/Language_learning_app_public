@@ -1,0 +1,23 @@
+/* ------------- SELECTION LIST ------------- */
+.selection-list{
+}
+
+.selection-list .cell{
+    -fx-background-color: -background-color;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(255,255,255, 0.2);
+    -fx-padding: 15;
+}
+
+.selection-list .cell:hover{
+    -fx-animated: true;
+    -fx-border-color: #8953E0;
+    -fx-border-width: 1;
+}
+
+.selection-list .cell.selected{
+    -fx-border-color: #8953E0;
+    -fx-border-width: 1;
+}

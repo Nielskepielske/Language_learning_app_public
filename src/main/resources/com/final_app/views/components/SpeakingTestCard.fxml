@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         styleClass="card, w-350"
+>
+    <HBox fx:id="header" styleClass="linear-gradient-gray, card-header, align-center, h-150">
+        <ImageView fx:id="icon"/>
+    </HBox>
+    <VBox styleClass="card-body" VBox.vgrow="ALWAYS" maxHeight="700" spacing="25">
+        <VBox>
+            <Label fx:id="lblTitle" styleClass="h2, primary"/>
+            <Region styleClass="sh-5"/>
+            <Label fx:id="lblDescription" styleClass="b3, secondary, text-wrap"/>
+        </VBox>
+        <Region VBox.vgrow="ALWAYS" maxHeight="Infinity"/>
+        <GridPane vgap="15">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50" halignment="RIGHT"/>
+            </columnConstraints>
+            <GridPane vgap="10" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="70"/>
+                    <ColumnConstraints percentWidth="30" halignment="RIGHT"/>
+                </columnConstraints>
+                <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" spacing="10" styleClass="align-center-left">
+                    <Label fx:id="circle" minWidth="0" minHeight="0" prefWidth="17" prefHeight="17" styleClass="circle"/>
+                    <Label fx:id="lblLanguage" styleClass="b3, primary"/>
+                </HBox>
+                <Label fx:id="lblLanguageLevel" styleClass="pill" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <ProgressBar fx:id="progress" styleClass="progress-bar-new" maxHeight="10" GridPane.hgrow="ALWAYS" maxWidth="Infinity" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2"/>
+                <HBox GridPane.rowIndex = "2" GridPane.columnIndex="0" spacing="5">
+                    <Label styleClass="b4, secondary" text="Score:"/>
+                    <Label fx:id="lblScore" styleClass="b4, secondary"/>
+                </HBox>
+                <Label fx:id="lblStatusSmall" styleClass="b4, secondary" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            </GridPane>
+
+
+            <HBox styleClass="align-center-left" GridPane.columnIndex="0" GridPane.rowIndex="1" spacing="5">
+                <Label fx:id="statusIcon" styleClass="primary"/>
+                <Label fx:id="lblStatus" styleClass="b3, secondary"/>
+            </HBox>
+            <Button fx:id="actionButton" styleClass="btn-modern, bg-light" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        </GridPane>
+    </VBox>
+</fx:root>

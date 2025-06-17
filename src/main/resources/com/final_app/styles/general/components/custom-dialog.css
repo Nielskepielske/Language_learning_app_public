@@ -1,0 +1,79 @@
+/* custom-dialog.css */
+
+/* Root pane styling: dark background, rounded corners, drop shadow */
+.custom-dialog {
+    -fx-background-color: #2b2b2b;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 2);
+}
+
+/* Header bar: slightly darker, rounded top corners */
+.dialog-header {
+    -fx-background-color: #1f1f1f;
+    -fx-background-radius: 8 8 0 0;
+    -fx-padding: 10 15;
+}
+
+/* Title label: light text, larger font */
+.dialog-title {
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+}
+
+/* Close button: transparent background, subtle hover effect */
+.dialog-close-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #888;
+    -fx-font-size: 1.2em;
+    -fx-padding: 0 4;
+}
+.dialog-close-button:hover {
+    -fx-text-fill: #ffffff;
+}
+
+/* Content area: padding and spacing */
+.dialog-content {
+    -fx-background-color: transparent;
+    -fx-padding: 15;
+}
+.dialog-content > * {
+    -fx-text-fill: #e0e0e0;
+}
+
+/* Footer button bar: padding, spacing */
+.dialog-button-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 10 15 15;
+}
+
+/* Buttons: flat, rounded, hover states */
+.dialog-button {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-padding: 6 14;
+}
+.dialog-button:hover {
+    -fx-background-color: #505356;
+}
+.dialog-button:pressed {
+    -fx-background-color: #383a3c;
+}
+
+/* TextField styling within dialog */
+/*.dialog-content .text-field {*/
+/*    -fx-background-color: #3c3f41;*/
+/*    -fx-text-fill: #e0e0e0;*/
+/*    -fx-prompt-text-fill: #666;*/
+/*    -fx-background-insets: 0;*/
+/*    -fx-background-radius: 4;*/
+/*    -fx-border-color: #555;*/
+/*    -fx-border-radius: 4;*/
+/*    -fx-padding: 5 8;*/
+/*}*/
+/*.dialog-content .text-field:focused {*/
+/*    -fx-border-color: #6a95ff;*/
+/*}*/

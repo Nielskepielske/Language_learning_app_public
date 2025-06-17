@@ -1,0 +1,27 @@
+/* TextBubble */
+.bubble{
+    -fx-border-radius: 10;
+    -fx-padding: 8 15;
+    -fx-background-radius: 10;
+    -fx-max-width: 200;
+    -fx-wrap-text: true;
+}
+
+.bubble.left{
+    -fx-border-color: white;
+    -fx-border-width: 0.2;
+    -fx-background-color: #26272B;
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+}
+.bubble.right{
+    -fx-background-color: #FAFBFB;
+    -fx-text-fill: black;
+    -fx-alignment: center-right;
+}
+
+.bubble.translation{
+    -fx-background-color: #2F57F5;
+    -fx-text-fill: white;
+    -fx-border-color: #2F95F5;
+}

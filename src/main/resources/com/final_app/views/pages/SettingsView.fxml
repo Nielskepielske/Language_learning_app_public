@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.final_app.views.pages.SettingsView"
+      styleClass="p-3"
+      spacing="20"
+>
+    <VBox>
+        <Label fx:id="lblTitle" styleClass="h1, primary" text="Settings"/>
+        <Label fx:id="lblDescription" styleClass="b1, secondary" text="Manage your account settings and preferences"/>
+    </VBox>
+    <VBox styleClass="card, p-2" spacing="20">
+        <VBox>
+            <Label fx:id="lblAccountTitle" styleClass="h2, primary" text="Account information"/>
+            <Label fx:id="lblAccountDescription" styleClass="b2, secondary" text="Manage your account details"/>
+        </VBox>
+        <GridPane hgap="20">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="44"/>
+                <ColumnConstraints percentWidth="44" halignment="RIGHT"/>
+            </columnConstraints>
+            <VBox styleClass="align-center-left" spacing="10" GridPane.columnIndex="0" fillWidth="true">
+                <Label fx:id="lblAccountUsername" styleClass="h4, primary" text="Username:"/>
+                <TextField fx:id="txtUsername" styleClass="b3, primary, textfield-modern" text="sampleUser"/>
+            </VBox>
+            <VBox styleClass="align-center-left" spacing="10" GridPane.columnIndex="1" fillWidth="true">
+                <Label fx:id="lblAccountEmail" styleClass="h4, primary" text="Email: "/>
+                <TextField fx:id="txtEmail" styleClass="b3, primary, textfield-modern" text="user@example.com"/>
+            </VBox>
+        </GridPane>
+        <HBox>
+            <Region HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <Button fx:id="btnSave" styleClass="btn-modern, primary, bg-dark, border-1, border-light" text="Save"/>
+        </HBox>
+    </VBox>
+    <VBox styleClass="card, p-2" spacing="20">
+        <VBox spacing="20">
+            <VBox>
+                <Label fx:id="lblLanguageTitle" styleClass="h2, primary" text="Language settings"/>
+                <Label fx:id="lblLanguageDescription" styleClass="b2, secondary" text="Choose the system language. This includes translations as well."/>
+            </VBox>
+            <VBox spacing="10">
+                <Label fx:id="lblLanguageSub" styleClass="h4, primary" text="Language: "/>
+                <ChoiceBox fx:id="choiceSystemLanguage" styleClass="choicebox-modern"/>
+            </VBox>
+        </VBox>
+        <VBox spacing="20">
+            <Label fx:id="lblSelectedLanguages" styleClass="h4, primary" text="Selected languages"/>
+            <FlowPane fx:id="lstSelectedLanguages" hgap="10" vgap="10"/>
+        </VBox>
+        <HBox>
+            <Region HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <Button fx:id="btnSaveExtraSettings" styleClass="btn-modern, bg-dark, border-1, border-light, primary" text="Save"/>
+        </HBox>
+    </VBox>
+</VBox>

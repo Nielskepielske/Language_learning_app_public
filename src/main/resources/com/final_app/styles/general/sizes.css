@@ -1,0 +1,50 @@
+/* --------- HEIGHTS -------- */
+.h-200{
+    -fx-pref-height: 200;
+}
+.h-150{
+    -fx-pref-height: 150;
+}
+.h-100{
+    -fx-pref-height: 100;
+}
+.h-90{
+    -fx-pref-height: 90;
+}
+/* --------- END HEIGHTS --------- */
+/* -------- WIDTHS -------- */
+.w-800{
+    -fx-pref-width: 800;
+    -fx-max-width: 800;
+}
+.w-700{
+    -fx-pref-width: 700;
+    -fx-max-width: 700;
+}
+.w-600{
+    -fx-pref-width: 600;
+    -fx-max-width: 600;
+}
+.w-500{
+    -fx-pref-width: 500;
+    -fx-max-width: 500;
+}
+.w-400{
+    -fx-pref-width: 400;
+    -fx-max-width: 400;
+}
+.w-350{
+    -fx-pref-width: 350;
+    -fx-max-width: 350;
+}
+.w-300{
+    -fx-pref-width: 300;
+    -fx-max-width: 300;
+}
+.w-200{
+    -fx-pref-width: 200;
+    -fx-max-width: 200;
+}
+.w-100{
+    -fx-pref-width: 100;
+}

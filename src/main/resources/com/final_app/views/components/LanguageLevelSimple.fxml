@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Circle?>
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fillWidth="true"
+>
+    <GridPane vgap="10">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="50"/>
+            <ColumnConstraints percentWidth="40" halignment="RIGHT"/>
+            <ColumnConstraints percentWidth="5"/>
+        </columnConstraints>
+        <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" spacing="10" styleClass="align-center-left">
+            <Label fx:id="circle" prefWidth="25" prefHeight="25" styleClass="circle"/>
+            <Label fx:id="lblLanguage" styleClass="h3, primary"/>
+        </HBox>
+        <Label fx:id="lblLanguageLevel" styleClass="b3, secondary" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <ProgressBar fx:id="progress" styleClass="progress-bar-new" GridPane.hgrow="ALWAYS" maxWidth="Infinity" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2"/>
+<!--        <Label styleClass="b3, secondary" GridPane.columnIndex="0" GridPane.rowIndex="2">Beginner</Label>-->
+        <Label fx:id="lblXpToNextLevel" styleClass="b3, secondary" GridPane.columnIndex="1" GridPane.rowIndex="2">Advanced</Label>
+        <VBox styleClass="border-2, border-light, border-radius-1, align-center" prefHeight="40" prefWidth="40" GridPane.columnIndex="3" GridPane.rowIndex="0" GridPane.rowSpan="3">
+            <Label fx:id="lblLanguageLevelReal" styleClass="b2, primary" />
+        </VBox>
+    </GridPane>
+</fx:root>

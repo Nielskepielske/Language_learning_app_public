@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.final_app.views.components.CustomGroupWindow?>
+<?import com.final_app.views.components.custom.general.EmptyPlace?>
+<?import com.final_app.views.components.custom.general.SearchBar?>
+<?import com.final_app.views.components.custom.general.FilterWindow?>
+<?import javafx.scene.image.ImageView?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.final_app.views.pages.ConversationsView"
+           styleClass="page"
+           fx:id="parent"
+>
+    <VBox spacing="30" fillWidth="true">
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50" halignment="RIGHT"/>
+            </columnConstraints>
+            <VBox GridPane.columnIndex="0">
+                <Label fx:id="lblTitle" styleClass="h1, primary">Your Conversations</Label>
+                <Label fx:id="lblDescription" styleClass="b3, secondary">Continue your language practice sessions</Label>
+            </VBox>
+            <HBox fx:id="btnNewConversation" GridPane.columnIndex="1" GridPane.fillWidth="NEVER" GridPane.fillHeight="NEVER"
+                    styleClass="btn-modern, primary, bg-dark, border-1, border-light, align-center-right">
+                <Label text="+" styleClass="primary"/>
+                <Label fx:id="lblNewConversation" styleClass="primary"/>
+            </HBox>
+        </GridPane>
+        <HBox spacing="20">
+            <SearchBar fx:id="searchBar" HBox.hgrow="ALWAYS" />
+            <VBox fx:id="btnFilter" styleClass="align-center, btn-modern, border-light, border-3">
+                <ImageView fx:id="imgFilter"/>
+            </VBox>
+        </HBox>
+
+        <!-- User's existing conversations -->
+        <VBox spacing="15" fx:id="yourCardBox">
+            <ScrollPane fitToWidth="true">
+                <VBox spacing="20">
+                    <Label fx:id="lblConversationChains" styleClass="h2, primary">Your Conversation chains</Label>
+                    <VBox fx:id="userConversationChainBox">
+                        <FlowPane fx:id="userConversationChainCards" hgap="20" vgap="20"/>
+                    </VBox>
+                    <Region styleClass="sh-4"/>
+                    <Label fx:id="lblConversations" styleClass="h2, primary">Your Conversations</Label>
+                    <FlowPane fx:id="cards" hgap="20" vgap="20"/>
+                </VBox>
+            </ScrollPane>
+        </VBox>
+
+        <!-- Available conversations -->
+        <VBox spacing="15" fx:id="availableBox" managed="false" opacity="0">
+            <ScrollPane fitToWidth="true">
+                <VBox spacing="20">
+                    <Label fx:id="lblAConversationChains" styleClass="h2, primary">Available Conversation chains</Label>
+                    <VBox fx:id="availableConversationChainBox">
+                        <FlowPane fx:id="availableConversationChainCards" hgap="20" vgap="20"/>
+                    </VBox>
+                    <Region styleClass="sh-4"/>
+                    <Label fx:id="lblAConversations" styleClass="h2, primary">Available Conversations</Label>
+                    <VBox fx:id="availableConversationsBox">
+                        <FlowPane fx:id="availableSingleConversationsCards" hgap="20" vgap="20"/>
+                    </VBox>
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </VBox>
+    <FilterWindow fx:id="filterWindow" visible="false"/>
+    <CustomGroupWindow fx:id="conversationGroupWindow" visible="false"/>
+</StackPane>

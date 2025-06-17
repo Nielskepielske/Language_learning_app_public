@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<fx:root type="HBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         minHeight="100"
+         styleClass="align-center-left"
+>
+    <GridPane HBox.hgrow="ALWAYS" maxWidth="Infinity">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="80"/>
+            <ColumnConstraints percentWidth="20" halignment="RIGHT"/>
+        </columnConstraints>
+        <HBox spacing="20" GridPane.columnIndex="0">
+            <VBox styleClass="align-center">
+                <VBox styleClass="circle, bg-gray, align-center" minWidth="25" minHeight="25" prefHeight="25" prefWidth="25" maxWidth="25" maxHeight="25">
+                    <Label fx:id="lblOrderNumber" styleClass="primary"/>
+                </VBox>
+            </VBox>
+            <HBox styleClass="align-center, border-3, border-light, border-radius-1, p-1">
+                <Label fx:id="lblText" styleClass="primary, text-wrap"/>
+            </HBox>
+        </HBox>
+        <HBox spacing="20" GridPane.columnIndex="1" styleClass="align-center-right">
+            <VBox fx:id="orderBtnsBox" styleClass="align-center" spacing="20">
+                <HBox fx:id="btnUpBox" styleClass="btn">
+                    <ImageView fx:id="btnUp"/>
+                </HBox>
+                <HBox fx:id="btnDownBox" styleClass="btn">
+                    <ImageView fx:id="btnDown"/>
+                </HBox>
+            </VBox>
+            <VBox fx:id="deleteBtnBox" styleClass="align-center">
+                <ImageView fx:id="btnDelete" styleClass="btn" pickOnBounds="true"/>
+            </VBox>
+        </HBox>
+    </GridPane>
+</fx:root>
