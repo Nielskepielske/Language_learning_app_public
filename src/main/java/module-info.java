@@ -28,7 +28,6 @@ module com.final_app {
     requires com.h2database;
     requires google.cloud.translate;
     requires jave.core;
-    requires org.apache.xmlgraphics.batik.transcoder;
     requires org.mockito;
     requires org.junit.jupiter.api;
 
@@ -52,6 +51,8 @@ module com.final_app {
     opens com.final_app.views.components.custom.list to de.saxsys.mvvmfx, javafx.fxml;
     exports com.final_app.tests;
     requires org.mockito.junit.jupiter;
+    requires batik.transcoder;
+    requires javafx.graphics;
     opens com.final_app.tests to org.junit.platform.commons;
     //because module com.final_app does not open com.final_app.models to javafx.base
 }
